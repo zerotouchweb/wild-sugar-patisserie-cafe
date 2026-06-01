@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <title>Wild Sugar Patisserie & Cafe – Premium Café in Mumbai</title>
+    <meta name="description" content="Wild Sugar Patisserie & Cafe offers artisanal pastries, specialty coffee, and a cozy ambiance in Mumbai. Visit us for delightful treats and warm hospitality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wild Sugar Patisserie & Cafe">
+    <meta property="og:description" content="Artisanal pastries, specialty coffee, and a cozy ambiance in Mumbai.">
+    <meta property="og:image" content="https://source.unsplash.com/800x600/?cafe">
+    <meta property="og:url" content="https://wildsugarcafe.com">
+    <meta property="og:type" content="website">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a2d9e6c9e3.js" crossorigin="anonymous"></script>
+    <style>
+        :root{
+            --primary:#6f4e37;
+            --secondary:#c49e6c;
+            --bg:#faf8f5;
+            --text:#333;
+            --accent:#d97706;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+        body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);}
+        a{color:inherit;text-decoration:none;}
+        header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,0.9);box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+        nav{display:flex;justify-content:center;padding:1rem;}
+        nav a{margin:0 1rem;font-weight:600;transition:color .3s;}
+        nav a:hover{color:var(--accent);}
+        .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;position:relative;overflow:hidden;}
+        .hero::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:50%;background:url('https://source.unsplash.com/800x600/?coffee') center/cover no-repeat;opacity:0.2;}
+        .hero h1{font-size:3rem;margin-bottom:1rem;animation:fadeIn 2s ease-out;}
+        .hero p{font-size:1.2rem;margin-bottom:2rem;animation:fadeIn 2s 0.5s ease-out forwards;opacity:0;}
+        .hero a{background:var(--accent);padding:.8rem 1.5rem;border-radius:30px;color:#fff;font-weight:600;transition:transform .3s;}
+        .hero a:hover{transform:scale(1.05);}
+        @keyframes fadeIn{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+        section{padding:4rem 2rem;}
+        .about{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;}
+        .about img{flex:1 1 300px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+        .about div{flex:1 1 300px;}
+        .about h2{font-size:2rem;margin-bottom:.5rem;color:var(--primary);}
+        .services{background:#fff;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+        .services h2{text-align:center;margin-bottom:2rem;color:var(--primary);}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;padding:0 2rem;}
+        .grid div{background:#fafafa;padding:1.5rem;border-radius:8px;text-align:center;transition:transform .3s;}
+        .grid div:hover{transform:translateY(-5px);}
+        .grid i{font-size:2rem;color:var(--accent);margin-bottom:.5rem;}
+        .testimonials{position:relative;overflow:hidden;}
+        .testimonials h2{text-align:center;margin-bottom:2rem;color:var(--primary);}
+        .carousel{display:flex;transition:transform .5s ease;}
+        .testimonial{min-width:100%;padding:2rem;background:#fff;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+        .testimonial p{font-style:italic;margin-bottom:1rem;}
+        .testimonial h4{font-weight:600;color:var(--primary);}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+        .gallery img{width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+        .contact{background:#fff;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);max-width:800px;margin:auto;}
+        .contact h2{text-align:center;margin-bottom:1.5rem;color:var(--primary);}
+        .contact form{display:flex;flex-direction:column;gap:.8rem;padding:0 2rem 2rem;}
+        .contact input,.contact textarea{padding:.8rem;border:1px solid #ccc;border-radius:5px;width:100%;}
+        .contact button{background:var(--accent);color:#fff;padding:.8rem;border:none;border-radius:30px;font-weight:600;cursor:pointer;transition:background .3s;}
+        .contact button:hover{background:#b45309;}
+        .map{margin-top:2rem;text-align:center;}
+        footer{background:#333;color:#fff;padding:2rem;text-align:center;position:relative;}
+        .social a{margin:0 .5rem;color:#fff;font-size:1.2rem;transition:color .3s;}
+        .social a:hover{color:var(--accent);}
+        .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:1000;}
+        .whatsapp i{color:#fff;font-size:1.8rem;}
+        @media(max-width:768px){
+            .hero h1{font-size:2.2rem;}
+            .about{flex-direction:column;}
+            nav a{margin:0 .5rem;}
+        }
+    </style>
+</head>
+<body>
+  <div class="zerotouch-demo-banner" style="background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%); color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 12px 24px; text-align: center; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; border-bottom: 2px solid #3b82f6; position: relative; z-index: 999999; box-sizing: border-box; line-height: 1.5;">
+    <span style="font-size: 16px;">💡</span>
+    <span>This is a <strong>free interactive demo website</strong> built automatically for <strong>Wild Sugar Patisserie & Cafe</strong>. This is not the official website of this business.</span>
+  </div>
+
+<header>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Menu</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="hero" class="hero">
+    <h1>Wild Sugar Patisserie &amp; Cafe</h1>
+    <p>Indulge in handcrafted pastries, aromatic coffee, and a warm Mumbai hospitality.</p>
+    <a href="#contact">Reserve a Table</a>
+</section>
+
+<section id="about" class="about">
+    <img src="https://source.unsplash.com/800x600/?cafe,interior" loading="lazy" alt="Cozy cafe interior">
+    <div>
+        <h2>About Us</h2>
+        <p>Located in the heart of Mumbai, Wild Sugar blends the art of patisserie with the soul of a café. Our skilled bakers create delightful pastries daily, while our baristas serve the finest coffee blends. Come for the taste, stay for the ambiance.</p>
+        <p><strong>Phone:</strong> <a href="tel:+917406839869">+91 74068 39869</a></p>
+        <p><strong>Email:</strong> <a href="mailto:zerotouchweb@gmail.com">zerotouchweb@gmail.com</a></p>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Specialties</h2>
+    <div class="grid">
+        <div>
+            <i class="fas fa-bread-slice"></i>
+            <h3>Signature Croissants</h3>
+        </div>
+        <div>
+            <i class="fas fa-coffee"></i>
+            <h3>Specialty Coffee</h3>
+        </div>
+        <div>
+            <i class="fas fa-ice-cream"></i>
+            <h3>Artisanal Ice Cream</h3>
+        </div>
+        <div>
+            <i class="fas fa-cake"></i>
+            <h3>Custom Cakes</h5>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="carousel" id="carousel">
+        <div class="testimonial">
+            <p>"The croissants are buttery perfection! A must-visit in Mumbai."</p>
+            <h4>Riya Sharma</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Their coffee has the best aroma and taste. Perfect spot to work."</p>
+            <h4>Arjun Patel</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Loved the custom cake for my birthday. Beautiful and delicious!"</p>
+            <h4>Neha Gupta</h4>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <img src="https://source.unsplash.com/800x600/?cafe, pastries" loading="lazy" alt="Pastry display">
+    <img src="https://source.unsplash.com/800x600/?coffee, latte" loading="lazy" alt="Latte art">
+    <img src="https://source.unsplash.com/800x600/?cake, dessert" loading="lazy" alt="Cake slice">
+    <img src="https://source.unsplash.com/800x600/?cafe, exterior" loading="lazy" alt="Cafe exterior">
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Lower+Ground+Floor,+SOCH+shopping+complex,+Dr+B+R+Ambedkar+Rd,+Belagavi,+Karnataka" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Mumbai Wild Sugar Patisserie &amp; Cafe</p>
+    <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<a href="https://wa.me/917406839869" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+    // Carousel functionality
+    const carousel = document.getElementById('carousel');
+    let index = 0;
+    const slides = carousel.children.length;
+    setInterval(()=>{
+        index = (index + 1) % slides;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    },4000);
+    // Contact form dummy handler
+    document.getElementById('contactForm').addEventListener('submit', e=>{
+        e.preventDefault();
+        alert('Thank you! Your message has been sent.');
+        e.target.reset();
+    });
+</script>
+</body>
+</html>
